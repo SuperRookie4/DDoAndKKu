@@ -1,10 +1,11 @@
-# DDoAndKKu
+# 📝DDoAndKKu
 
 ## 팀원 
 
- - 김명주 : https://github.com/myeongjjj
- - 이규휘 : https://github.com/Igu-ri
+ - 김명주 ☞ https://github.com/myeongjjj
+ - 이규휘 ☞ https://github.com/Igu-ri
 
+   
 
 ## 게시판 - 명주
 
