@@ -2,7 +2,10 @@
 
 ## 팀원 
 
- -김명주 : https://github.com/myeongjjj
+ - 김명주 : https://github.com/myeongjjj
+ - 이규휘 : https://github.com/Igu-ri
+
+ - 
 <명주- 게시판>
 database
 -
