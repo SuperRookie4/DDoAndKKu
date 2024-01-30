@@ -1,5 +1,7 @@
 package mgJoin_p;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class BoardDTO {
@@ -53,6 +55,20 @@ public class BoardDTO {
 	}
 	public void setPostDay(Date postDay) {
 		this.postDay = postDay;
+	}
+	
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	public void setPostDayStr(String postDay) {
+		try {
+			this.postDay = sdf.parse(postDay);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	public String getPostDayStr() {
+		return sdf.format(postDay);
 	}
 	@Override
 	public String toString() {

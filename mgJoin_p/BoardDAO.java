@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class BoardDAO {
@@ -48,6 +49,7 @@ public class BoardDAO {
 		
 		try {
 			sql = "select * from board";
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-");
 			
 			rs = stm.executeQuery(sql);
 			
@@ -112,4 +114,27 @@ public class BoardDAO {
 		return dto;
 	}
 	
+	public int write(BoardDTO dto){
+		int res = 0;
+		try {
+		
+			sql = "insert into board "
+					+ "(postTitle, contents, pid, pname, postDay, postFile, number) "
+					+ "values"
+					+ "('"+dto.getPostTitle()+"', '"+dto.getContents()
+					+"', '"+dto.getPid()+"', '"+dto.getPname()
+					+"', '"+dto.getPostDayStr()+"', '"+dto.getPostFile()
+					+"', "+dto.getNumber()+")"; 
+			
+			res = stm.executeUpdate(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			close();
+			
+		}
+		
+		return res;
+	}
 }
