@@ -8,8 +8,9 @@
 <head>
 <meta charset="UTF-8">
 <title>postDetail </title>
+
 <%
-	BoardDTO dto = new BoardDAO().detail(2);
+	BoardDTO dto = new BoardDAO().detail(Integer.parseInt(request.getParameter("number")));
 
 %>
 <c:set var="dto" value="<%=dto %>"/>
